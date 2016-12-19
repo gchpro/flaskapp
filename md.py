@@ -22,6 +22,8 @@ class MD(object):
 
         header,body = f.read().split('===')
         header = yaml.load(header)
+        # body.decode('utf8')
+        body = unicode(body.decode('utf8'))
         body = markdown.markdown(body)
         data = header
         data.update({'body':body})
@@ -43,7 +45,6 @@ class MD(object):
     # 将文章按照时间排序
     def sortposts(self):
         global cache
-        1
 
 if __name__ == '__main__':
     md = MD(config.CONFIG)
