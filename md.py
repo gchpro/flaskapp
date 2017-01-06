@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #coding:utf-8
 
-import markdown,yaml,os,config
+import markdown,yaml,os,config,time
 
 cache = {}
 
@@ -12,6 +12,7 @@ class MD(object):
 
     def find(self,filename):
         global cache
+        filename = unicode(filename)
         if filename in cache: return cache[filename]
         try:
             path = self.path + '/' + filename + '.md'
@@ -35,17 +36,21 @@ class MD(object):
     def findall(self):
         global cache
         postslist = os.listdir(self.path)
-        print postslist
+        # print postslist
         for post in postslist:
-            filename = post.split('.')[0]
+            if not post.endswith('.md'): continue
+            filename = (post.split('.')[0]).decode('utf8')
             self.find(filename)
 
-        return cache.values()
+        allpost = cache.values()
+        allpost.sort(key=lambda x: x['date'], reverse=True)
+        return allpost
 
     # 将文章按照时间排序
-    def sortposts(self):
-        global cache
+    def sort_by_time(self):
+        pass
 
 if __name__ == '__main__':
     md = MD(config.CONFIG)
     print md.findall()
+    # print md.sort_by_time()

@@ -7,7 +7,7 @@ md = MD(config.CONFIG)
 
 @app.route('/')
 def home():
-	allpost = md.findall()[0:5]
+	allpost = md.findall()
 	return render_template('home.html',**{'postlist':allpost})
 
 @app.route('/about')
