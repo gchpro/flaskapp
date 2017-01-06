@@ -3,15 +3,16 @@
         <meta charset="utf-8">
         <title>JohnLoftY's Blog</title>
         <link rel="stylesheet" href="/static/css/main.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     </head>
     <body id="index" class="home">
         <header id="banner" class="body">
             <h1>JohnLoftY's Blog</h1>
             <nav>
                 <ul>
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="{{ url_for('home') }}">Projects</a></li>
-                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('home') }}">主页</a></li>
+                    <li><a href="{{ url_for('home') }}">项目</a></li>
+                    <li><a href="{{ url_for('about') }}">关于</a></li>
                 </ul>
             </nav>
         </header>

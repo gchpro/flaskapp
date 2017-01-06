@@ -1,6 +1,6 @@
 title: twisted 笔记 1
 date: 2016-12-19 16:25:00
-summary: 介绍了一个最小接口文件的组成
+summary: 由于twisted是一个异步网络库, 先简单了解下异步,并发,并行的概念.
 
 ===
 
@@ -14,7 +14,7 @@ twisted是一个一部异步网络库。
 
 异步(asynchronous):
 
-![asynchronous](./img/asynchronous.jpeg)
+![asynchronous](../static/img/asynchronous.jpeg)
 
 	
 	An asynchronous program dispatches tasks to devices that can take care of themselves, leaving the program free to do somethings else until it receives a signal that the results are finished.
@@ -23,14 +23,14 @@ twisted是一个一部异步网络库。
 
 并行(parallel):
 
-![asynchronous](./img/parallel.jpg)
+![asynchronous](../static/img/parallel.jpeg)
 
 	Parallel programs distribute their tasks to multiple processors, that actively work on all of them simultaneously.
 	并行程序自动将任务分派到多个处理器上,并且所有任务同步执行.
 	
 并发(concurrency):
 
-![asynchronous](./img/concurrency.jpeg)
+![asynchronous](../static/img/concurrency.jpeg)
 
 
 	Concurrent programs handle tasks that are all in progress at the same time, but is is only necessary to work briefly and separately on each task, so the work can be interleaved in whatever order the tasks require.
