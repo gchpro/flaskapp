@@ -1,10 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
+	<!-- 
 	<dir class="jumbo">
 		<h2>Welcome to the Flask app</h2>
 		<h3>This is the home page for the Flask app</h3>
 	</dir>
-
+ -->
 	<div class="postlist">
 		{% for post in postlist %}
 			<h3><a href="{{ url_for("show_post", filename=post.filename ) }}"">{{ post.title }}</a></h3>
