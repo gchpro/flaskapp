@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #coding:utf-8
 
-CONFIG = {
+MDCONFIG = {
 	'path':'posts',
 	'pagesize':5
 }
