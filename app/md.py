@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #coding:utf-8
 
-import markdown,yaml,os,config,time
+import markdown,yaml,os,time
 
 '''
     cache = {
